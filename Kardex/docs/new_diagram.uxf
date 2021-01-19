@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>230</y>
+      <w>170</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Produto
+--
+- id: int
+- nome: String
+- localizacao: String
+- qtdeMaxima: int
+- qtdeMinima: int
+- qtdeEstoque: int
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>240</y>
+      <w>150</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Fornecedor
+--
+- id: int
+- cnpj: String
+- nome: String
+- telefone: String
+- email: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>180</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Entrada
+--
+- id: int
+- fornecedor: Fornecedor
+- data: Date
+- doc: String
+- qtde: int
+- valor: double
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>20</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+- id: int
+- cpf: String
+- nome: String
+- celular: String
+- email: String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>20</y>
+      <w>170</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Saida
+--
+- id: int
+-  produto: Produto
+- cliente: Cliente
+- data: Date
+- doc: String
+- qtde: int
+- valor: double
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
