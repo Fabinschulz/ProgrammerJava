@@ -14,15 +14,20 @@ public class Principal {
 
 	public static void main(String[] args) {
 		ArrayList<Produto> produtos = seedProduto();
-		Produto p = produtos.get(0);
-		Kardex k = seedKardex(p);
-		/*
-		 * alterar seedFornecedor e seedCliente 
-		 * para gerar 3 registros de cada
-		 */
-		Fornecedor f = seedFornecedor();
-		Cliente c = seedCliente();
+		Produto p = produtos.get(3);
 		
+		ArrayList<Fornecedor> fornecedores = seedFornecedor();
+		Fornecedor f = fornecedores.get(0);
+			
+		ArrayList<Cliente> clientes = seedCliente();
+		Cliente c = clientes.get(0);
+		
+		/*
+		 * Kardex não pode ser instanciado pois é 
+		 * uma classe abstrata - gerada por herança
+		 */
+		//Kardex k = seedKardex(p);
+
 		System.out.println(p);
 		Entrada e = seedEntrada(p,f);
 		System.out.println(e);
@@ -53,34 +58,38 @@ public class Principal {
 	    return e;
 	}
 
-	public static Cliente seedCliente() {
-		int id = 3;
-		String cpf = "005.421.980-96";
-		String nome = "William Gates III";
-		String celular = "(11) 91111-2222";
-		String email = "bill@microsoft.com";
-		Cliente c = new Cliente(id,cpf,nome,celular,email);
-		return c;
-	}
-	
-	public ArrayList<Fornecedor> seedFornecedor() {
-		ArrayList<Fornecedor> lista = new ArrayList<>();
-		
-		int id = 2;
-		String cnpj = "46.388.927/0001-41";
-		String nome = "Microsoft Corporation";
-		String telefone = "1112345678";
-		String email = "vendas@microsoft.com";
-		Fornecedor f = new Fornecedor (id,cnpj,nome,telefone,email);
-		
-		lista.add(f);
-		lista.add(new Fornecedor(2,
-		lista.add(new Fornecedor(3,
-		lista.add(new Fornecedor(4,
+	public static ArrayList<Cliente> seedCliente() {
+		ArrayList<Cliente> lista = new ArrayList<>();
+
+		lista.add(new Cliente(1,"005.421.980-96",
+					"William Gates III","(11) 91111-2222",
+					"bill@microsoft.com"));
+		lista.add(new Cliente(2,"034.750.010-20",
+					"Elon Musk","(11) 99999-9999",
+					"elon@spacex.com"));		
+		lista.add(new Cliente(3,"393.892.870-06",
+					"Nikola Tesla","(11) 98765-4321",
+					"nikola@tesla.com"));
 		
 		return lista;
-		
 	}
+	
+	public static ArrayList<Fornecedor> seedFornecedor() {
+		ArrayList<Fornecedor> lista = new ArrayList<>();
+
+		lista.add(new Fornecedor (1,"46.388.927/0001-41",
+				  "Microsoft Corporation","1112345678",
+				  "vendas@microsoft.com"));
+		lista.add(new Fornecedor (2,"13.433.432/0001-38",
+				  "Kingston Cards","2122225555",
+				  "vendas@kingston.com"));
+		lista.add(new Fornecedor (3,"07.720.304/0001-72",
+				  "Samsung Inc.","1199999999",
+				  "sales@samsung.com"));	
+		
+		return lista;
+	}
+	
 	public static ArrayList<Produto> seedProduto() {
 		ArrayList<Produto> lista = new ArrayList<>();
 		
@@ -106,15 +115,14 @@ public class Principal {
 		return lista;
 	}
 	
-	public static Kardex seedKardex(Produto p) {
-		int id = 1;
-		Date data = new Date("19/01/2021");
-		String doc = "NF 1234";
-		int qtde = 10;
-		double valor = 1000;	
-		Kardex k = new Kardex(id,p,data,doc,qtde,valor);
-		return k;
-	}
+//	public static Kardex seedKardex(Produto p) {
+//		int id = 1;
+//		Date data = new Date("19/01/2021");
+//		String doc = "NF 1234";
+//		int qtde = 10;
+//		double valor = 1000;	
+//		Kardex k = new Kardex(id,p,data,doc,qtde,valor);
+//		return k;
+//	}
 	
-}
 }
