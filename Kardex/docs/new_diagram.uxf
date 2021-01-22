@@ -4,29 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
-      <y>230</y>
-      <w>170</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>Produto
---
-- id: int
-- nome: String
-- localizacao: String
-- qtdeMaxima: int
-- qtdeMinima: int
-- qtdeEstoque: int
---</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>360</x>
-      <y>240</y>
+      <x>10</x>
+      <y>250</y>
       <w>150</w>
-      <h>140</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Fornecedor
 --
@@ -41,28 +22,24 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
+      <x>210</x>
+      <y>280</y>
       <w>180</w>
-      <h>150</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Entrada
 --
-- id: int
-- fornecedor: Fornecedor
-- data: Date
-- doc: String
-- qtde: int
-- valor: double
+
+
 --</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>420</x>
-      <y>20</y>
-      <w>170</w>
+      <x>650</x>
+      <y>260</y>
+      <w>160</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>Cliente
@@ -78,21 +55,111 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
-      <y>20</y>
+      <x>410</x>
+      <y>280</y>
       <w>170</w>
-      <h>160</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Saida
 --
+
+
+--
+ </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>40</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Kardex
+--
 - id: int
--  produto: Produto
-- cliente: Cliente
 - data: Date
 - doc: String
 - qtde: int
 - valor: double
 --</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>190</y>
+      <w>100</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;60.0;40.0;90.0;20.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>40</y>
+      <w>170</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Produto
+--
+- id: int
+- nome: String
+- localizacao: String
+- qtdeMaxima: int
+- qtdeMinima: int
+- qtdeEstoque: int
+--
++ entrada(entrada:Entrada)
++ saida(saida:Saida)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>190</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;60.0;70.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>310</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>320</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>100</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
