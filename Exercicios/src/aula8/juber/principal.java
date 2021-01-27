@@ -1,6 +1,6 @@
 package aula8.juber;
 
-import aula8.Triangulo;
+import aula08.Triangulo;
 
 public class principal {
 	

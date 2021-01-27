@@ -22,8 +22,8 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
-import aula4.ClasseIMC;
-import aula6.Mat;
+import aula04.ClasseIMC;
+import aula06.Mat;
 
 public class TelaIMC extends JFrame {
 

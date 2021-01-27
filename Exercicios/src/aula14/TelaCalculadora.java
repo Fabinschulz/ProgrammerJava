@@ -22,7 +22,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
-import aula6.Mat;
+import aula06.Mat;
 
 /*
  * criar calculadora de 4 operações:

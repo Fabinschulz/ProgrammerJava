@@ -33,7 +33,7 @@ public class Paciente {
 		
 		public String getIMC() {
 			double imc = pesoPct / (altura * altura);
-			String classe = aula4.ClasseIMC.classeIMC(imc);
+			String classe = aula04.ClasseIMC.classeIMC(imc);
 			return classe;
 		}
 
