@@ -6,7 +6,7 @@ import java.util.Date;
 import model.Cliente;
 import model.Entrada;
 import model.Fornecedor;
-import model.Kardex;
+//import model.Kardex;
 import model.Produto;
 import model.Saida;
 
@@ -40,7 +40,8 @@ public class Principal {
 	
 	public static Saida seedSaida(Produto p, Cliente c) {
 		int id = 1;
-	    Date data = new Date("01/21/2021"); 
+	    @SuppressWarnings("deprecation")
+		Date data = new Date("01/21/2021"); 
 	    String doc = "NF 888";
 	    int qtde = 5;
 	    double valor = 450.00;
@@ -50,7 +51,8 @@ public class Principal {
 	
 	public static Entrada seedEntrada(Produto p, Fornecedor f) {
 		int id = 1;
-	    Date data = new Date("01/20/2021"); 
+	    @SuppressWarnings("deprecation")
+		Date data = new Date("01/20/2021"); 
 	    String doc = "NF 999";
 	    int qtde = 20;
 	    double valor = 350.00;
