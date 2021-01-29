@@ -9,32 +9,37 @@ import model.Fornecedor;
 //import model.Kardex;
 import model.Produto;
 import model.Saida;
+import view.Tela;
 
 public class Principal {
-
+	
+	public static ArrayList<Produto> produtos;
+	
 	public static void main(String[] args) {
-		ArrayList<Produto> produtos = seedProduto();
-		Produto p = produtos.get(3);
-		
-		ArrayList<Fornecedor> fornecedores = seedFornecedor();
-		Fornecedor f = fornecedores.get(0);
-			
+	    produtos = seedProduto();
+	    seedFornecedor();
 		ArrayList<Cliente> clientes = seedCliente();
-		Cliente c = clientes.get(0);
+		
+		Tela frame = new Tela();
+		frame.setVisible(true);
 		
 		/*
 		 * Kardex não pode ser instanciado pois é 
 		 * uma classe abstrata - gerada por herança
-		 */
-		//Kardex k = seedKardex(p);
-
-		System.out.println(p);
-		Entrada e = seedEntrada(p,f);
-		System.out.println(e);
-		System.out.println(p);
-		Saida s = seedSaida(p,c);
-		System.out.println(s);
-		System.out.println(p);
+		 *
+		// Kardex k = seedKardex(p);
+		 * Produto p = produtos.get(3);
+		 * Fornecedor f = fornecedores.get(0);
+		 * Cliente c = clientes.get(0);
+		   System.out.println(p);
+		   Entrada e = seedEntrada(p,f);
+		   System.out.println(e);
+		   System.out.println(p);
+		   Saida s = seedSaida(p,c);
+		   System.out.println(s);
+		   System.out.println(p);
+		*
+		*/
 		
 	}
 	
@@ -76,20 +81,18 @@ public class Principal {
 		return lista;
 	}
 	
-	public static ArrayList<Fornecedor> seedFornecedor() {
-		ArrayList<Fornecedor> lista = new ArrayList<>();
-
-		lista.add(new Fornecedor (1,"46.388.927/0001-41",
+	public static void seedFornecedor() {
+		 new Fornecedor (1,"46.388.927/0001-41",
 				  "Microsoft Corporation","1112345678",
-				  "vendas@microsoft.com"));
-		lista.add(new Fornecedor (2,"13.433.432/0001-38",
+				  "vendas@microsoft.com");
+		 new Fornecedor (2,"13.433.432/0001-38",
 				  "Kingston Cards","2122225555",
-				  "vendas@kingston.com"));
-		lista.add(new Fornecedor (3,"07.720.304/0001-72",
+				  "vendas@kingston.com");
+		 new Fornecedor (3,"07.720.304/0001-72",
 				  "Samsung Inc.","1199999999",
-				  "sales@samsung.com"));	
-		
-		return lista;
+				  "sales@samsung.com");
+				  
+	
 	}
 	
 	public static ArrayList<Produto> seedProduto() {
