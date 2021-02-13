@@ -1,7 +1,6 @@
-package aula8.juber;
+package aula08;
 
 public class Retangulo {
-	
 	double base;
 	double altura;
 	
@@ -17,5 +16,6 @@ public class Retangulo {
 	public double getArea() {
 		return (base * altura);
 	}
+
 
 }

@@ -1,11 +1,11 @@
-package aula9.paciente;
+package aula09;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PacienteSistema {
-	
-static ArrayList<Paciente> lista = new ArrayList<Paciente>();
+
+	static ArrayList<Paciente> lista = new ArrayList<Paciente>();
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -46,5 +46,4 @@ static ArrayList<Paciente> lista = new ArrayList<Paciente>();
 		Paciente p = new Paciente(nome,idade,peso,altura);
 		lista.add(p);
 	}
-
 }

@@ -1,4 +1,4 @@
-package aula9.agenda.copy;
+package aula09;
 
 public class Agenda {
 	

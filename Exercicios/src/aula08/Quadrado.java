@@ -1,6 +1,4 @@
-package aula8.juber;
-
-public class Quadrado {
+package aula08;
 
 /*
  * implementar a classe Quadrado com:
@@ -8,7 +6,7 @@ public class Quadrado {
  * 		getPerimetro() = 4 * lado
  * 		getArea() = lado * lado
  */
-
+public class Quadrado {
 	
 	double lado;
 	
@@ -26,5 +24,3 @@ public class Quadrado {
 	}
 
 }
-
-

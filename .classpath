@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Exercicios/src"/>
+	<classpathentry kind="src" path="Kardex/src"/>
+	<classpathentry kind="src" path="ProgrammerJava/src"/>
+	<classpathentry kind="output" path="Exercicios/bin"/>
+</classpath>
